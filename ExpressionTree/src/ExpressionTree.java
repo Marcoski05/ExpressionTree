@@ -51,7 +51,7 @@ public class ExpressionTree extends TreeNode implements Expressions {
 		int rightValue = ((ExpressionTree) getRight()).evalTree();
 
 		String operator = getValue().toString();
-		if (operator == "+")
+		if (operator.equals("+"))
 			return leftValue + rightValue;
 		else
 			return leftValue * rightValue;
@@ -104,12 +104,12 @@ public class ExpressionTree extends TreeNode implements Expressions {
 		Stack<Integer> stack = new Stack<>();
 
 		for (String element : exp) {
-			if (element == "+") {
+			if (element.equals("+")) {
 				int right = stack.pop();
 				int left = stack.pop();
 				stack.push(left + right);
 			}
-			else if (element == "*") {
+			else if (element.equals("*")) {
 				int right = stack.pop();
 				int left = stack.pop();
 				stack.push(left * right);
@@ -122,7 +122,7 @@ public class ExpressionTree extends TreeNode implements Expressions {
 	}
 
 	public boolean isOperator(String s) {
-		return s == "+" || s == "*";
+		return s.equals("+") || s.equals("*");
 	}
 
 }
