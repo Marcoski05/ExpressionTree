@@ -1,0 +1,42 @@
+evalTree: 6
+Prefix notation: * 3 2
+Infix notation: ( 3 ) * ( 2 )
+Postfix notation: 3 2 *
+postfixEval: 6
+
+
+evalTree: 5
+Prefix notation: + 3 2
+Infix notation: ( 3 ) + ( 2 )
+Postfix notation: 3 2 +
+postfixEval: 5
+
+
+evalTree: 10
+Prefix notation: + * 3 2 4
+Infix notation: (( 3 ) * ( 2 )) + ( 4 )
+Postfix notation: 3 2 * 4 +
+postfixEval: 10
+
+
+evalTree: 24
+Prefix notation: * * 3 2 4
+Infix notation: (( 3 ) * ( 2 )) * ( 4 )
+Postfix notation: 3 2 * 4 *
+postfixEval: 24
+
+
+evalTree: 42
+Prefix notation: * + 2 5 + 4 2
+Infix notation: (( 2 ) + ( 5 )) * (( 4 ) + ( 2 ))
+Postfix notation: 2 5 + 4 2 + *
+postfixEval: 42
+
+
+evalTree: 1008
+Prefix notation: * + * 4 3 * 2 6 + + 1 9 + + 4 3 * 5 5
+Infix notation: ((( 4 ) * ( 3 )) + (( 2 ) * ( 6 ))) * ((( 1 ) + ( 9 )) + ((( 4 ) + ( 3 )) + (( 5 ) * ( 5 ))))
+Postfix notation: 4 3 * 2 6 * + 1 9 + 4 3 + 5 5 * + + *
+postfixEval: 1008
+
+
